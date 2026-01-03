@@ -141,7 +141,7 @@ h1{
 
 @media (max-width: 768px) {
   body {
-    zoom: 1.15;
+    font-size: 115%;
   }
 
   .glass {
@@ -150,10 +150,10 @@ h1{
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .tagline {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
