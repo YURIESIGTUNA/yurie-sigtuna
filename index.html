@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="UTF-8">
   <title>YURIE SIGTUNA</title>
@@ -10,6 +9,7 @@
 
 <body>
   <div class="glass">
+
     <img src="web/574010314_24869401032754959_1303095258784926896_n.png" class="avatar">
 
     <h1>YURIE SIGTUNA</h1>
@@ -19,10 +19,15 @@
 
     <p class="quote">Xin chào! Mình là Thái</p>
 
+    
+    <div class="profile-volume">
+      <input type="range" id="profileVolume" min="0" max="100" value="60">
+    </div>
+
     <div class="socials">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">Discord</a>
-      <a href="#" target="_blank">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Discord</a>
+      <a href="#">Facebook</a>
     </div>
 
     <div class="music-bar">
@@ -30,7 +35,6 @@
 
       <div class="info">
         <div class="title">Phong Hoa – Tuyết Nguyệt</div>
-
         <div class="time">
           <span id="current">0:00</span>
           <div class="progress">
@@ -50,12 +54,12 @@
           </svg>
         </button>
       </div>
-
-      <div id="yt"></div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-</body>
+    <div id="yt"></div>
+  </div>
 
+  <script src="script.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
 </html>
