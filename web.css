@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  height:100vh;
+  background:
+    radial-gradient(circle at top, #2a0005, #050000);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.glass{
+  width:390px;
+  padding:38px;
+  border-radius:26px;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter: blur(18px);
+  text-align:center;
+  box-shadow:
+    0 0 45px rgba(255,0,60,0.25),
+    inset 0 0 30px rgba(255,0,40,0.08);
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:2px solid #ff2a55;
+  box-shadow:0 0 20px rgba(255,40,80,0.6);
+  margin-bottom:22px;
+}
+
+h1{
+  color:#ffeaea;
+  font-size:28px;
+  letter-spacing:1px;
+}
+
+.tagline{
+  margin-top:6px;
+  color:#ff9aa9;
+  font-size:14px;
+  opacity:.85;
+}
+
+.status{
+  margin:16px 0;
+  font-size:13px;
+}
+
+.online{
+  color:#ff3b6b;
+}
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:24px 0;
+}
+
+.socials a{
+  padding:9px 16px;
+  border-radius:22px;
+  background:rgba(255,60,90,0.12);
+  color:#ffd6dd;
+  text-decoration:none;
+  font-size:13px;
+  transition:.3s;
+}
+
+
+.music-bar{
+  margin-top:28px;
+  width:100%;
+  height:78px;
+  display:flex;
+  align-items:center;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(20,10,10,.75);
+  backdrop-filter: blur(16px);
+  box-shadow:0 0 25px rgba(255,40,80,.25);
+}
+
+.cover{
+  width:52px;
+  height:52px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.info{
+  flex:1;
+  margin-left:16px;
+}
+
+.title{
+  font-size:14px;
+  font-weight:600;
+  color:#ffeaea;
+}
+
+.time{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  margin-top:6px;
+  color:#ffb6c3;
+}
+
+.progress{
+  flex:1;
+  height:4px;
+  background:#3a0a14;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:#ff2a55;
+  border-radius:4px;
+}
+
+.controls button{
+  background:none;
+  border:none;
+  color:#ffdee5;
+  font-size:22px;
+  cursor:pointer;
+}

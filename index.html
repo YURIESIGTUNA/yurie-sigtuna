@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YURIE SIGTUNA</title>
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <div class="glass">
+      <img
+        src="web/574010314_24869401032754959_1303095258784926896_n.png"
+        class="avatar"
+      />
+
+      <h1>YURIE SIGTUNA</h1>
+      <p class="tagline">Love Custas • Hate Chocopie</p>
+
+      <div class="status online">● ONLINE</div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/juliesigtuna55/" target="_blank"
+          >Instagram</a
+        >
+        <a href="https://discord.com/channels/@me" target="_blank">Discord</a>
+        <a href="https://www.facebook.com/giathai.tran.75" target="_blank"
+          >Facebook</a
+        >
+      </div>
+
+      <div class="music-bar">
+        <img
+          class="cover"
+          src="web/574010314_24869401032754959_1303095258784926896_n.png"
+        />
+
+        <div class="info">
+          <div class="title" id="song">Phong Hoa – Tuyết Nguyệt</div>
+
+          <div class="time">
+            <span id="current">0:00</span>
+            <div class="progress" onclick="seek(event)">
+              <div class="progress-bar" id="bar"></div>
+            </div>
+            <span id="duration">0:59</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="play">⏸</button>
+        </div>
+      </div>
+
+      
+      <div id="yt"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
