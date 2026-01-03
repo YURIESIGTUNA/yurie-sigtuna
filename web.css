@@ -138,3 +138,22 @@ h1{
   font-size:22px;
   cursor:pointer;
 }
+
+@media (max-width: 768px) {
+  body {
+    zoom: 1.15;
+  }
+
+  .glass {
+    width: 95%;
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+}
