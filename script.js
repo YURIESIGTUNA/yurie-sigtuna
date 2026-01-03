@@ -1,5 +1,5 @@
 let player;
-let playing = true;
+let playing = false;
 
 const bar = document.getElementById("bar");
 const playBtn = document.getElementById("play");
@@ -12,12 +12,11 @@ function onYouTubeIframeAPIReady(){
     width: '0',
     videoId: 'V92cBlohd5M',
     playerVars:{
-      autoplay:1,
-      controls:0
+      autoplay: 0,
+      controls: 0
     },
     events:{
-      onReady: e => {
-        e.target.playVideo();
+      onReady: () => {
         setInterval(update, 500);
       }
     }
@@ -30,10 +29,11 @@ function update(){
   const cur = player.getCurrentTime();
   const dur = player.getDuration();
 
-  bar.style.width = (cur/dur)*100 + "%";
-
-  current.textContent = format(cur);
-  durationText.textContent = format(dur);
+  if(dur){
+    bar.style.width = (cur/dur)*100 + "%";
+    current.textContent = format(cur);
+    durationText.textContent = format(dur);
+  }
 }
 
 function format(t){
@@ -41,18 +41,22 @@ function format(t){
          String(Math.floor(t%60)).padStart(2,"0");
 }
 
-playBtn.onclick = ()=>{
+
+playBtn.addEventListener("click", () => {
+  if(!player) return;
+
   if(playing){
     player.pauseVideo();
-    playBtn.textContent="▶";
+    playBtn.textContent = "▶";
   }else{
     player.playVideo();
-    playBtn.textContent="⏸";
+    playBtn.textContent = "⏸";
   }
   playing = !playing;
-};
+});
 
 function seek(e){
+  if(!player) return;
   const rect = e.currentTarget.getBoundingClientRect();
   const percent = (e.clientX - rect.left) / rect.width;
   player.seekTo(player.getDuration() * percent, true);
