@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>YURIE SIGTUNA</title>
-    <link rel="stylesheet" href="web.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="glass">
-      <img
-        src="web/574010314_24869401032754959_1303095258784926896_n.png"
-        class="avatar"
-      />
 
-      <h1>YURIE SIGTUNA</h1>
-      <p class="tagline">Love Custas • Hate Chocopie</p>
+<head>
+  <meta charset="UTF-8">
+  <title>YURIE SIGTUNA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="web.css">
+</head>
 
-      <div class="status online">● ONLINE</div>
+<body>
+  <div class="glass">
+    <img src="web/574010314_24869401032754959_1303095258784926896_n.png" class="avatar">
 
-      <div class="socials">
-        <a href="https://www.instagram.com/juliesigtuna55/" target="_blank"
-          >Instagram</a
-        >
-        <a href="https://discord.com/channels/@me" target="_blank">Discord</a>
-        <a href="https://www.facebook.com/giathai.tran.75" target="_blank"
-          >Facebook</a
-        >
-      </div>
+    <h1>YURIE SIGTUNA</h1>
+    <p class="tagline">Love Custas • Hate Chocopie</p>
 
-      <div class="music-bar">
-        <img
-          class="cover"
-          src="web/574010314_24869401032754959_1303095258784926896_n.png"
-        />
+    <div class="status">● IDLE</div>
 
-        <div class="info">
-          <div class="title" id="song">Phong Hoa – Tuyết Nguyệt</div>
+    <p class="quote">Xin chào! Mình là Thái</p>
 
-          <div class="time">
-            <span id="current">0:00</span>
-            <div class="progress" onclick="seek(event)">
-              <div class="progress-bar" id="bar"></div>
-            </div>
-            <span id="duration">0:59</span>
+    <div class="socials">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Discord</a>
+      <a href="#" target="_blank">Facebook</a>
+    </div>
+
+    <div class="music-bar">
+      <img class="cover" src="web/574010314_24869401032754959_1303095258784926896_n.png">
+
+      <div class="info">
+        <div class="title">Phong Hoa – Tuyết Nguyệt</div>
+
+        <div class="time">
+          <span id="current">0:00</span>
+          <div class="progress">
+            <div class="progress-bar" id="bar"></div>
           </div>
-        </div>
-
-        <div class="controls">
-          <button id="play">⏸</button>
+          <span id="duration">0:00</span>
         </div>
       </div>
 
-      
+      <div class="controls">
+        <button id="play">▶</button>
+
+        <button id="loop" class="loop-btn" title="Loop">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M17 1l4 4-4 4V6H7a4 4 0 000 8h1v2H7a6 6 0 010-12h10V1zM7 23l-4-4 4-4v3h10a4 4 0 000-8h-1V8h1a6 6 0 010 12H7v3z" />
+          </svg>
+        </button>
+      </div>
+
       <div id="yt"></div>
     </div>
 
     <script src="script.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-  </body>
+</body>
+
 </html>
