@@ -6,7 +6,8 @@
 }
 
 body{
-  height:100vh;
+  min-height:100vh;
+  height:auto;
   background:
     radial-gradient(circle at top, #2a0005, #050000);
   display:flex;
@@ -141,7 +142,7 @@ h1{
 
 @media (max-width: 768px) {
   body {
-    font-size: 115%;
+    font-size: 100%;;
   }
 
   .glass {
@@ -156,4 +157,9 @@ h1{
   .tagline {
     font-size: 1rem;
   }
+}
+
+.socials a:hover{
+  background:rgba(255,60,90,0.25);
+  box-shadow:0 0 15px rgba(255,40,80,0.4);
 }
