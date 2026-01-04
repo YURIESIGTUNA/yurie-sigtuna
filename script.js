@@ -5,12 +5,16 @@ let flowerCooldown = false;
 let currentIndex = 0;
 
 
+const MUTE_RATE = 0.2;
+
+
 const playlist = [
   { title: "Lữ khách qua thời gian", id: "mdnmmFakN7Y" },
   { title: "Cữu vĩ hồ", id: "bRsqpJUNUnI" },
   { title: "Trả cho anh", id: "qkjZSgK6HTo" },
   { title: "Hẹn hò không yêu", id: "D-ocSsuMETI" }
 ];
+
 
 const bar = document.getElementById("bar");
 const playBtn = document.getElementById("play");
@@ -24,6 +28,7 @@ const progress = document.querySelector(".progress");
 const volSlider = document.getElementById("profileVolume");
 const titleText = document.querySelector(".title");
 
+
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("yt", {
     height: "0",
@@ -33,12 +38,33 @@ function onYouTubeIframeAPIReady() {
     events: {
       onReady: () => {
         titleText.textContent = playlist[currentIndex].title;
+        gachaVolume(); 
         setInterval(update, 500);
       },
       onStateChange
     }
   });
 }
+
+
+function gachaVolume() {
+  if (!player) return;
+
+  let volume;
+  if (Math.random() < MUTE_RATE) {
+    volume = 0; 
+  } else {
+    volume = Math.floor(Math.random() * 101); 
+  }
+
+  player.setVolume(volume);
+  volSlider.value = volume;
+  volSlider.style.setProperty("--vol", volume + "%");
+  volSlider.title = volume === 0
+    ? "🔇 MUTED (GACHA)"
+    : `🎲 Volume: ${volume}%`;
+}
+
 
 function loadSong(index) {
   currentIndex = index;
@@ -67,6 +93,7 @@ function onStateChange(e) {
   }
 }
 
+
 function update() {
   if (!player || !player.getDuration) return;
   const cur = player.getCurrentTime();
@@ -88,6 +115,7 @@ function updateStatus() {
     ? h >= 22 ? "● LATE NIGHT" : "● LISTENING"
     : "● IDLE";
 }
+
 
 playBtn.onclick = () => {
   if (!player) return;
@@ -116,10 +144,12 @@ progress.onclick = e => {
   player.seekTo(player.getDuration() * p, true);
 };
 
-volSlider.addEventListener("input", e => {
-  const v = e.target.value;
-  player.setVolume(v);
-  volSlider.style.setProperty("--vol", v + "%");
+
+volSlider.addEventListener("click", () => {
+  gachaVolume();
 });
+
+
+volSlider.addEventListener("mousedown", e => e.preventDefault());
 
 updateStatus();
